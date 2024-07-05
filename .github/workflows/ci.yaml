@@ -11,4 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
+    - name: Setup node
+      uses: actions/setup-node@v4
+      whith:
+        node-version: 20
+        cache: 'yarn'
+    - run: yarn
+    - run: yarn run test
