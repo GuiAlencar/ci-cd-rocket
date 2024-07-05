@@ -14,10 +14,9 @@ jobs:
         node: [ 16, 18, 20 ]
 
     steps:
-    - name: Checkout do código
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-    - name: Setup Node | ${{ matrix.node }}
+    - name: Setup node | ${{ matrix.node }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node }}
