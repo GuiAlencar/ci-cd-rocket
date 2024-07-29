@@ -30,6 +30,12 @@ jobs:
     - run: yarn
     - run: yarn run test
 
+    - name: Semantic Release
+      uses: cycjimmy/semantic-release-action@v4
+      env:
+        # gerar o token no github e adicionar ele na secrets and variables como GH_TOKEN
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
     - name: Generate tag
       id: generate_tag
       run: |
