@@ -27,6 +27,9 @@
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Installation
+```bash
+export PATH=$PATH:/snap/bin
+```
 
 ```bash
 $ npx @nestjs/cli@latest new NOME_DO_PROJETO
